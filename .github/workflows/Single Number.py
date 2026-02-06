@@ -23,6 +23,21 @@ Obj = Solution()
 print(Obj.singleNumber(nums = [4, 1, 2, 1, 2]))
 
 
+# Another Solution: Time: O(n) Space: O(1)
+class Solution:
+    def singleNumber(self, nums: List[int]) -> List[int]:
+        d = {}
+        for i in nums:
+            if i not in d:
+                d[i] = 1
+            else:
+                del d[i]
+        return(list(d.keys()))
+
+Obj = Solution()
+print(Obj.singleNumber(nums = [1,2,1,3,2,5]))
+
+
     
 
     
