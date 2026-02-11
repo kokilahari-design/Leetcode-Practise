@@ -1,3 +1,6 @@
+
+
+# Time Complexity = O(n)    Space Complexity = O(n)
 class Solution(object):
     def isValid(self, s):
         d = { '(':')' , "{":'}' , "[":"]" }
@@ -6,11 +9,11 @@ class Solution(object):
             if i in d.keys():
                 stack.append(i) 
             else:
-                if stack == []:
-                    return False
+                if stack == []:                # If input = ")[]"  -> If beginning has closed parenthesis, then return False
+                    return False     
                 else:
                     pop_value = i
-                    if d[stack[-1]] == pop_value :
+                    if d[stack[-1]] == pop_value :             # Fetch dictionary value of stack last element match with the pop_value 
                         stack.pop()
                     else:
                         return False
@@ -20,3 +23,22 @@ class Solution(object):
             return False
 result = Solution("()[]{}")
 print(result)
+
+
+---------------------------------------------------------------------------------------------------------------------------
+# Optimized code:
+
+class Solution(object):
+    def isValid(self, s):
+        stack = []
+        d = {')': '(', '}': '{', ']': '['}
+        
+        for char in s:
+            if char in d:  # closing bracket
+                if not stack or stack[-1] != d[char]:
+                    return False
+                stack.pop()
+            else:  # opening bracket
+                stack.append(char)
+                
+        return not stack
