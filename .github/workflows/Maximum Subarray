@@ -1,0 +1,21 @@
+# 53. Maximum Subarray 
+# Iterate each element in list, add iterated element with current_max variable, check if current_max value is greater than max variable value
+# If greater, then assign current_max value to max variable. 
+# If adding iterated element with current_max value becomes negative value, then make cmax to 0 (so that next iterated element gets increased instead of getting subtraced) 
+
+input = [-2,1,-3,4,-1,2,1,-5,4]   # retuens output as 6 ->  subarray [4,-1,2,1] has the largest sum 6.
+
+class Solution(object):
+    def maxSubArray(self, input):
+        max = input[0]   # Assign max variable with input 1st element, Becoz if input = [-1] , it return -1 as output [Incase, if assigned max =0, then it returns 0]
+        cmax = 0
+        for i in input:
+            if cmax < 0:    # If current max value becomes negative, make cmax = 0
+                cmax = 0
+            cmax +=i
+            if cmax > max:
+                max = cmax
+        return max
+
+result = maxSubArray(input)
+print(result)
