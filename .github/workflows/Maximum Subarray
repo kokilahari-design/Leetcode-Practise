@@ -1,4 +1,4 @@
-# 53. Maximum Subarray 
+# 53. Maximum Subarray  # Time Complexity → O(n), Space Complexity → O(1) (Constant space)
 # Iterate each element in list, add iterated element with current_max variable, check if current_max value is greater than max variable value
 # If greater, then assign current_max value to max variable. 
 # If adding iterated element with current_max value becomes negative value, then make cmax to 0 (so that next iterated element gets increased instead of getting subtraced) 
@@ -17,5 +17,6 @@ class Solution(object):
                 max = cmax
         return max
 
-result = maxSubArray(input)
+obj = Solution()
+result = obj.maxSubArray(input)
 print(result)
