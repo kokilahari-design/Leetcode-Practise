@@ -1,4 +1,4 @@
-# 55. Jump Game  -> Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+# 55. Jump Game -> Time Complexity = O(n) Space Complexity = O(1) -> Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
 # Input: nums = [2,3,1,1,4]  Output: true
 # Greedy Algorithm: solves a problem by repeatedly choosing the locally optimal option at each step in hopes of reaching a globally optimal solution.
 # Initially Consider last position of input as jump_index, then iterate from second last position to 0 index, 
