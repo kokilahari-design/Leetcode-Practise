@@ -48,3 +48,26 @@ else:
         
 
     print(prev1)
+
+# Recursion Approach:  Time complexity -> O(2^n), Space complexity -> O(n) 
+def fib(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return fib(n-1) + fib(n-2)
+print(fib(4))
+
+fib(4)
+ ├── fib(3)
+ │    ├── fib(2)
+ │    │    ├── fib(1) → 1
+ │    │    └── fib(0) → 0
+ │    └── fib(1) → 1
+ └── fib(2)
+      ├── fib(1) → 1
+      └── fib(0) → 0
+
+fib(2) is calculated twice
+fib(1) is calculated multiple times
+It's Slow, Because of overlapping subproblems, Same Fibonacci values are recomputed again and again.
