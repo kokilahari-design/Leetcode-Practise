@@ -1,5 +1,5 @@
 
-# 509. Fibonacci Number : Time complexity -> O(n), Space complexity -> O(n) as it stores all the (n+1) values in the dp array.
+# 509. Fibonacci Number :  
 # F(0) = 0, F(1) = 1, F(n) = F(n - 1) + F(n - 2), for n > 1.
 # Input: n = 4, Output: 3 (return last index value), Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 
@@ -10,6 +10,7 @@
 # initialize dp[0] = 0 and dp[1] = 1, Iterate from 2 to n index 
 # Fill the dp array using the relation dp[i] = dp[i-1] + dp[i-2], finally return the last element of the dp array which is the nth Fibonacci number. 
 
+# Dynamic Approach: Time complexity -> O(n), Space complexity -> O(n) as it stores all the (n+1) values in the dp array.
 
 class Solution(object):
     def fib(self, n):
