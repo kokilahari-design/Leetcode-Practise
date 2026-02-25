@@ -37,7 +37,6 @@ class Solution:
 Obj = Solution()
 print(Obj.singleNumber(nums = [1,2,1,3,2,5]))
 
-
     
 
     
