@@ -1,5 +1,5 @@
 # 15. 3Sum
-# input = [0,1,1] [0,0,0] [-1,0,1,2,-1,-4]  Output =  [], [[0,0,0]], [[-1,-1,2],[-1,0,1]]
+# input = [0,1,1] or [0,0,0] or [-1,0,1,2,-1,-4]  Output =  [], [[0,0,0]], [[-1,-1,2],[-1,0,1]]
 # Time Complexity = O(n²) -> O(n log n) sort + O(n × n) for + while loop
 # Space Complexity = O(k) -> O(k) list output + O(log n) sort stack   (k = number of valid triplets)
 
